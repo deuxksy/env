@@ -1,3 +1,4 @@
+syntax on               "¹
 set number              " line 표시를 해줍니다.
 set ai                  " auto index
 set shiftwidth=4        " shift를 4칸으로 ( >, >>, <, << 등의 명령어)
@@ -15,4 +16,4 @@ set title               " 제목을 표시
 set showmatch           " 매칭되는 괄호를 보여줌
 set nowrap              " 자동 줄바꿈 하지 않음
 set wmnu                " tab 자동완성시 가능한 목록을 보여줌
-syntax on               " 문법 하이라이트 킴"
+    
