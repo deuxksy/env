@@ -14,12 +14,12 @@ buildDir = 'build'
 
 //변수
 ext {
-    spring='4.2.5.RELEASE'
-    logbackclassic='1.1.3'
-    commonslang3='3.4'
-    jodatime='2.9.3'
-    guava='19.0'
-    junit='4.+'
+	spring='4.2.5.RELEASE'
+	logbackclassic='1.1.3'
+	commonslang3='3.4'
+	jodatime='2.9.3'
+	guava='19.0'
+	junit='4.+'
 }
 
 // eclipse 전용 설정
@@ -38,8 +38,8 @@ eclipse {
 
 //jar 설정
 jar {
-    archiveName=project.name+'.jar'
-    //archiveName : jar 파일 이름 지정하지 않을시 baseName-appendix-version-classifier.extendion 생성
+	archiveName=project.name+'.jar'
+	//archiveName : jar 파일 이름 지정하지 않을시 baseName-appendix-version-classifier.extendion 생성
 	manifest {
 		attributes 'baseName':project.name, 'Implementation-Title': 'Gradle Quickstart', 'Implementation-Version' : version
 	}
@@ -99,7 +99,7 @@ repositories {
 //미사용 라이브러리 설정
 configurations.all {
    all.collect { configuration ->
-    configuration.exclude group: 'commons-logging', module: 'commons-logging'
+	configuration.exclude group: 'commons-logging', module: 'commons-logging'
   }
 }
 
@@ -137,16 +137,16 @@ uploadArchives {
 project root 폴더에 gradlew. gradlew.bat 으로 gradle 사용이 가능
 */
 task wrapper(type: Wrapper) {
-    gradleVersion = '2.12' // 원하는 Gradle 버전 명시
+	gradleVersion = '2.12' // 원하는 Gradle 버전 명시
 }
 
 //Gradle 통해 실행되는 Java Application 에 Gradle 의 System Properties 전달하기
 tasks.withType(JavaExec) {
-    systemProperties System.properties
+	systemProperties System.properties
 }
 
 /*
 task print {
-    logger.lifecycle(project.ext['spring'])
+	logger.lifecycle(project.ext['spring'])
 }
 */
