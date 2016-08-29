@@ -1,0 +1,8 @@
+{
+    // Where to look for python virtualenvs
+    "python_virtualenv_paths": [
+        "~/works/*",
+        "~/.virtualenvs",  // virtualenvwrapper
+        "~/.venv"  // venv.bash https://github.com/wuub/venv
+    ],
+}
