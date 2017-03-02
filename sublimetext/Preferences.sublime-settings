@@ -1,0 +1,12 @@
+{
+    "color_scheme": "Packages/User/Monokai (Flake8Lint).tmTheme",   //Monokai
+    "draw_white_space": "all",                                      //공백을 ·· 표시 하기
+    "detect_slow_plugins": false,                                   //간혹 알림 창 뜰때
+    "translate_tabs_to_spaces": true,                               //tap 을 공백으로 표시
+    "tab_size": 4,                                                  //tap 사이즈 
+    "font_size": 11,                                                //글자 크기
+    "ignored_packages":                                             //vi 편집 모드 미사용
+    [
+        "Vintage"
+    ]
+}
