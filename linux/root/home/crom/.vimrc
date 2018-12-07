@@ -1,5 +1,4 @@
 set autoindent          "자동 indent
-set cident              "C stype indent
 set number              "line 표시를 해줍니다.
 set ai                  "auto index
 set shiftwidth=4        "shift를 4칸으로 ( >, >>, <, << 등의 명령어)
