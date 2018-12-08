@@ -10,7 +10,7 @@ Plugin 'rstacruz/sparkup', {'rtp': 'vim/'}     "
 
 Plugin 'godlygeek/tabular'                     "
 Plugin 'plasticboy/vim-markdown'               "
-Plugin 'scrooloose/nerdtree'                   " 파일 네비게이션
+Plugin 'scrooloose/nerdtree'                   " 파일 네비게이션 :NERDTree 대소문자 구분해야함
 Plugin 'scrooloose/syntastic'                  "
 Plugin 'altercation/vim-colors-solarized'      "
 
