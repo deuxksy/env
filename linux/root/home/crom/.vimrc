@@ -3,6 +3,7 @@ filetype off                                   " required
 set rtp+=~/.vim/bundle/Vundle.vim              " Plugin 위치
 call vundle#begin()                            " Plugin 시작
 
+                                               " https://vimawesome.com
 Plugin 'VundleVim/Vundle.vim'                  " Plugin 관리자
 Plugin 'tpope/vim-fugitive'                    "
 Plugin 'rstacruz/sparkup', {'rtp': 'vim/'}     "
