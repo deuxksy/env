@@ -11,6 +11,7 @@ fi
 # User specific aliases and functions
 
 alias vi='vim'
+alias ll='ls -alh'
 alias rm='rm -i'
 alias cp='cp -i'
 alias mv='mv -i'
