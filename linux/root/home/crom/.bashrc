@@ -15,3 +15,6 @@ alias ll='ls -alh'
 alias rm='rm -i'
 alias cp='cp -i'
 alias mv='mv -i'
+
+export VISUAL=vim
+export EDITOR="$VISUAL"
