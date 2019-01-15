@@ -98,3 +98,6 @@ source $ZSH/oh-my-zsh.sh
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 alias ll="ls -alh"
 alias vi="vim"
+
+export VISUAL=vim
+export EDITOR="$VISUAL"
