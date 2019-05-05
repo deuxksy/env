@@ -1,0 +1,7 @@
+all:
+  children:
+    raspberrypi:
+      hosts:
+        witch:49201:
+        trickster:49202:
+        enchantress:49201:
