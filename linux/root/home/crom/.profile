@@ -23,5 +23,6 @@ fi
 
 export ANSIBLE_INVENTORY=~/.ansible/hosts
 export ANSIBLE_CONFIG=~/.ansible/ansible.cfg
+export ANSIBLE_STDOUT_CALLBACK=debug
 
 alias ll='ls -alh'
