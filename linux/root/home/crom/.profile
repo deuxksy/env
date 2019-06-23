@@ -25,5 +25,6 @@ export ANSIBLE_INVENTORY=~/.ansible/hosts
 export ANSIBLE_CONFIG=~/.ansible/ansible.cfg
 export ANSIBLE_STDOUT_CALLBACK=debug
 export EDITOR=vim
-
+export PACKER_LOG=1
+export PACKER_LOG_PATH=~/log/packer.log
 alias ll="ls -alh"
