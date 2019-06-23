@@ -111,3 +111,6 @@ if ! shopt -oq posix; then
     . /etc/bash_completion
   fi
 fi
+
+export PACKER_LOG=1
+export PACKER_LOG_PATH=~/log/packer.log
