@@ -36,7 +36,8 @@ set nowrap                                     "자동 줄바꿈 하지 않음
 set wmnu                                       "tab 자동완성시 가능한 목록을 보여
 set laststatus=2                               "상태바 표시를 항상한다
 set statusline=\ %<%l:%v\ [%P]%=%a\ %h%m%r\ %F\ 
-set paste                                      "분여넣기 계단현상 없애기
+set paste                                      "붙여넣기 계단현상 없애기
+set mouse-=a                                   "마우스 사용시 visual 모드 비활성
 " 마지막으로 수정된 곳에 커서를 위치함
 au BufReadPost *
 \ if line("'\"") > 0 && line("'\"") <= line("$") |
