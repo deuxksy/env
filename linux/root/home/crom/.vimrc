@@ -18,6 +18,7 @@ call vundle#end()                              " Plugin 끝
 filetype plugin indent on                      
 
 set number                                     "line 표시를 해줍니다.
+set list                                       "공백 표시
 set ai                                         "auto index
 set shiftwidth=4                               "shift를 4칸으로 ( >, >>, <, << 등의 명령어)
 set tabstop=4                                  "tab을 4칸으로
