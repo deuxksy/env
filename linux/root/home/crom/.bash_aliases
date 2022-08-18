@@ -4,8 +4,6 @@ alias grep='grep --color=auto'
 alias vi='/opt/homebrew/Cellar/vim/9.0.0200/bin/vi'
 alias kubectl='minikube kubectl --'
 
-export USERID='crong'
-export USERPW='dksy2030'
 export TIME_STYLE='long-iso'
 export EDITOR='vi'
 export PATH="/opt/homebrew/bin:${PATH}"
