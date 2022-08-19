@@ -20,7 +20,7 @@ command_exits() {
 
 check_command() {
   for cli in $@; do
-    DEBUG "CLI: ${cli}"
+    DEBUG "${cli}: $(which ${cli})"
     if ! command_exits ${cli}; then
       ERROR "${cli} is not installed."
       sleep 1
