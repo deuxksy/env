@@ -32,6 +32,9 @@ check_command() {
 # awsh ${EC2-TAG-NAME}
 # ec2ssh mf-prd-ec2-java
 ec2ssh() {
+  ec2=$1
+  ec2=${ec2:=ec2-nxp-dev-cache}
+
   check_command aws yq &&
     aws ssm start-session \
       --target $(
@@ -45,15 +48,23 @@ ec2ssh() {
 # ecssh ${CLUSTER_NAME} ${SERVICE_NAME} ${CONTAINER_NAME}
 # ecssh cluster-qa-backend service-qa-api api
 ecssh() {
+  cluster=$1
+  service=$2
+  container=$3
+
+  cluster=${cluster:=cluster-nxp-dev-backend}
+  service=${service:=service-dev-api}
+  container=${container:=api}
+
   check_command aws yq &&
-    aws ecs execute-command --cluster $1 \
+    aws ecs execute-command --cluster ${cluster} \
       --interactive \
       --command "/bin/sh" \
-      --container $3 \
+      --container ${container} \
       --task $(
         aws ecs list-tasks \
-          --cluster $1 \
-          --service-name $2 \
+          --cluster ${cluster} \
+          --service-name ${service} \
           --desired-status RUNNING \
           --output yaml | yq \
           ".taskArns.[0]"
