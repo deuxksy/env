@@ -34,12 +34,11 @@ check_command() {
 ec2ssh() {
   ec2=$1
   ec2=${ec2:=ec2-nxp-dev-cache}
-
-  check_command aws yq &&
+  check_command aws yq session-manager-plugin &&
     aws ssm start-session \
       --target $(
         aws ec2 describe-instances \
-          --filters Name=tag:Name,Values=$1 \
+          --filters Name=tag:Name,Values=${EC2} \
           --output yaml | yq \
           ".Reservations[0].Instances[0].InstanceId"
       )
@@ -56,7 +55,7 @@ ecssh() {
   service=${service:=service-dev-api}
   container=${container:=api}
 
-  check_command aws yq &&
+  check_command aws yq session-manager-plugin &&
     aws ecs execute-command --cluster ${cluster} \
       --interactive \
       --command "/bin/sh" \
