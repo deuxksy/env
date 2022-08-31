@@ -38,7 +38,7 @@ ec2ssh() {
     aws ssm start-session \
       --target $(
         aws ec2 describe-instances \
-          --filters Name=tag:Name,Values=${EC2} \
+          --filters Name=tag:Name,Values=${ec2} \
           --output yaml | yq \
           ".Reservations[0].Instances[0].InstanceId"
       )
