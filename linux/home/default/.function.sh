@@ -38,7 +38,9 @@ ec2ssh() {
     aws ssm start-session \
       --target $(
         aws ec2 describe-instances \
-          --filters Name=tag:Name,Values=${ec2} \
+          --filters \
+            Name=tag:Name,Values=${ec2} \
+            Name=instance-state-code,Values=16 \
           --output yaml | yq \
           ".Reservations[0].Instances[0].InstanceId"
       )
@@ -68,4 +70,9 @@ ecssh() {
           --output yaml | yq \
           ".taskArns.[0]"
       )
+}
+
+ec2ls() {
+  check_command aws yq
+  aws ec2 describe-instances | yq '.Reservations[].Instances[].Tags|map(select(.Key == "Name")).[].Value'
 }
