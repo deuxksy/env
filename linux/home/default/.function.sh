@@ -39,8 +39,8 @@ ec2ssh() {
       --target $(
         aws ec2 describe-instances \
           --filters \
-            Name=tag:Name,Values=${ec2} \
-            Name=instance-state-code,Values=16 \
+          Name=tag:Name,Values=${ec2} \
+          Name=instance-state-code,Values=16 \
           --output yaml | yq \
           ".Reservations[0].Instances[0].InstanceId"
       )
@@ -74,5 +74,7 @@ ecssh() {
 
 ec2ls() {
   check_command aws yq
-  aws ec2 describe-instances | yq '.Reservations[].Instances[].Tags|map(select(.Key == "Name")).[].Value'
+  aws ec2 describe-instances \
+    --filters Name=instance-state-name,Values=running |
+    yq '.Reservations[].Instances[].Tags|map(select(.Key == "Name")).[].Value'
 }
