@@ -16,7 +16,6 @@ Plugin 'vim-airline/vim-airline'               "
 Plugin 'vim-airline/vim-airline-themes'        "
 Plugin 'altercation/vim-colors-solarized'      "
 Plugin 'majutsushi/tagbar'                     "
-Plugin 'valloric/youcompleteme'                "
 Plugin 'kien/ctrlp.vim'                        "
 Plugin 'fatih/vim-go'                          "
 
