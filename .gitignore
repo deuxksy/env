@@ -1,2 +1,11 @@
 .idea
 .gradle
+.DS_Store
+*.swp
+*.swo
+.AppleDouble
+.LSOverride
+Icon
+Network Trash Folder
+Temporary Items
+.apdisk

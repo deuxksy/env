@@ -1,3 +1,3 @@
 #!/usr/bin/env bash
-set IP = $(curl ifconfig.co)
-curl https://<USERNAME>:<PASSWORD>@domains.google.com/nic/update?hostname=<SUBDOMAIN>.zzizily.com&myip=${IP}
+IP=$(curl -s ifconfig.co)
+curl -s "https://<USERNAME>:<PASSWORD>@domains.google.com/nic/update?hostname=<SUBDOMAIN>.zzizily.com&myip=${IP}"
