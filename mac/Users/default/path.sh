@@ -7,4 +7,4 @@ export LDFLAGS="-L/opt/homebrew/opt/curl/lib"
 export CPPFLAGS="-I/opt/homebrew/opt/curl/include"
 export TIME_STYLE='long-iso'
 export EDITOR='nvim'
-export PATH
+export TERM='xterm-256color'

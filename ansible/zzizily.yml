@@ -8,35 +8,31 @@
   # become_user: crom
   # 변수 선언
   vars:
-    file: 'memo.txt'
+    file: "memo.txt"
   # 변수 외부 파일로 받기
   vars_files: ~/vars_files_zzizily
   # 변수를 입력 받기
   vars_prompt:
     # 변수명
-    - name: 'password'
-      prompt: 'https password input plz!!!'
+    - name: "password"
+      prompt: "https password input plz!!!"
       private: yes
   tasks:
     - name: debug test
       debug:
-        msg: 'var key={{key}}, file={{file}}, password={{password}}'
-    - name: shell test
-      shell: |
-        echo {{key}} >> {{file}}
-        echo {{password}} >> {{file}}
+        msg: "var key={{key}}, file={{file}}"
     - name: manage tools
       apt:
         name: "{{ packages }}"
         state: latest
       vars:
         packages:
-        - vim
-        - neofetch
-        - glances
-        - netcat
-        - curl
-        - git
+          - vim
+          - neofetch
+          - glances
+          - netcat
+          - curl
+          - git
     #- name: openjdk-8-jdk install
     #  apt:
     #    name: openjdk-8-jdk
@@ -54,9 +50,9 @@
         state: latest
       vars:
         packages:
-        - vim
-        - neofetch
-        - glances
-        - netcat
-        - curl
-        - git
+          - vim
+          - neofetch
+          - glances
+          - netcat
+          - curl
+          - git

@@ -33,6 +33,7 @@ set expandtab                                  " tab 대신 띄어쓰기로
 set background=dark                            " 검정배경을 사용할 때, (이 색상에 맞춰 문법 하이라이트 색상이 달라집니다.)
 set nocompatible                               " 방향키로 이동가능
 set fileencodings=utf-8                        " 파일인코딩 형식 지정
+set ff=unix                                    " fileformat unix 스타일로 강제 변환
 set bs=indent,eol,start                        " backspace 키 사용 가능
 set history=1000                               " 명령어에 대한 히스토리를 1000개까지
 set ruler                                      " 상태표시줄에 커서의 위치 표시
