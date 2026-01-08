@@ -1,7 +1,8 @@
 # Handle 'lsd' substitute for 'ls'
 if command -v lsd &> /dev/null; then
     alias ls='lsd --color=auto'
-    alias ll='lsd -alhFv --group-directories-first'
+    alias ll='lsd -alhFgv --header --icon always --group-directories-first --permission octal'
+    alias la='lsd -alhFgv --header --icon always --group-directories-first --permission octal --total-size'
 else
     alias ls='ls -G'
     alias ll='ls -alfh'

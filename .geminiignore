@@ -1,0 +1,55 @@
+# General OS files
+.DS_Store
+.AppleDouble
+.LSOverride
+Icon
+Network Trash Folder
+Temporary Items
+.apdisk
+Thumbs.db
+desktop.ini
+
+# IDEs and Editors
+.idea/
+.vscode/
+*.swp
+*.swo
+*~
+
+# Build & Dependency Artifacts
+.gradle/
+node_modules/
+vendor/
+bin/
+obj/
+
+# Logs and temporary files
+*.log
+tmp/
+temp/
+
+# Sensitive Information (to avoid indexing private data)
+# Even if they are in the repo, AI context often doesn't need raw keys/tokens.
+.ssh/
+.netrc
+*.key
+*.pem
+*.p12
+*.crt
+.env
+.env.*
+!.env.example
+
+# AI Helper Artifacts
+.gemini/
+CHANGELOG.md
+README.md
+GEMINI.md
+# (Keep README/GEMINI.md if you want the AI to know the project docs, 
+# but often we ignore meta-docs to focus on code. 
+# However, GEMINI.md is important for me, so I'll EXCLUDE it from ignore if it's there.)
+!GEMINI.md
+!README.md
+
+# Backups from setup.sh
+*.bak

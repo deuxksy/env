@@ -14,3 +14,21 @@
 - **전문 용어**: IT 전문 용어는 영어 원문을 그대로 사용하거나 병기하여 명확성을 높인다.
   - 예: "Dependency Injection", "Race Condition"
 - **요약 우선**: 긴 설명이 필요한 경우, **TL;DR** 요약을 상단에 배치한다.
+
+## 2. 소유 하드웨어
+
+### Server
+
+- **GL-iNet Beryl AX (GL-MT3000)**: Wi-Fi 6 Travel Router
+- **GL-iNet Brume 2 (GL-MT2500)**: Security Gateway
+- **Surface Pro 6 (Ubuntu 24 LTS, 128GB, MicroSD 256GB)**
+- **Chatreey NAS (Intel N100 2Bay, 8GB, 128GB, 4TB)**
+- **Mac mini (M4, 16GB, 256GB)**
+- **Mac Studio (M1 Max, 64GB, 512GB)**
+- **Steam Deck (LCD, 256GB, MicroSD 512GB)**
+
+### Client
+
+- **iPad Pro 12.9 (M1, 1TB, Wi-Fi)**
+- **iPhone 13 mini (128GB)**
+- **Galaxy Z Flip5 (512GB)**
