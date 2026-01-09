@@ -6,10 +6,12 @@
 
 ### 💻 OS별 설정
 
-- **[mac](./mac)**: macOS 사용자별 `.alias`, `.path` 설정
-- **[linux](./linux)**: Linux (`/etc`, `/var`, `/home`) 시스템 설정 및 홈 디렉토리 구성
+- **[base](./base)**: 모든 환경 공통 설정 (Zsh, Vim, Git)
+- **[macos](./macos)**: macOS 전용 `.alias`, `.path` 설정
+- **[surface-6](./surface-6)**: Ubuntu (Surface Pro 6) 전용 설정
+- **[chatreey-nas](./chatreey-nas)**: Fedora (NAS) 전용 설정
+- **[steam-deck](./steam-deck)**: Steam Deck 전용 커스텀 설정
 - **[windows](./windows)**: Windows 환경 (Winget 등) 가이드
-- **[steamdeck](./steamdeck)**: Steam Deck 전용 커스텀 설정
 
 ## 🚀 사용법
 

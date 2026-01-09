@@ -8,4 +8,23 @@
 Icon
 Network Trash Folder
 Temporary Items
-.apdisk
+
+# Local configuration / Secrets
+.local_secrets
+*.bak
+
+# Build and Tooling
+.terraform/
+.terraform.lock.hcl
+.python-version
+.ruby-version
+.node-version
+
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Java
+build/
+bin/

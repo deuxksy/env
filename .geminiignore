@@ -42,7 +42,10 @@ temp/
 
 # AI Helper Artifacts
 .gemini/
-CHANGELOG.md
+ContextFile.md
+task.md
+implementation_plan.md
+walkthrough.md
 README.md
 GEMINI.md
 # (Keep README/GEMINI.md if you want the AI to know the project docs, 
