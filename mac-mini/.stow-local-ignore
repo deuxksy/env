@@ -1,0 +1,5 @@
+.ansible/*
+.ssh/*
+.bashrc
+.function.sh
+.profile
