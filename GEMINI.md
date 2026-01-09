@@ -15,20 +15,20 @@
   - 예: "Dependency Injection", "Race Condition"
 - **요약 우선**: 긴 설명이 필요한 경우, **TL;DR** 요약을 상단에 배치한다.
 
-## 2. 하드웨어
+## 2. 🛠️ 아키텍처 및 관리 원칙 (Dotfiles Architecture)
 
-### Server
+### 라이브러리 관리 3단계 (3-Layer Management)
+- **Layer 1 (Native PM)**: 시스템 패키지 매니저(`brew`, `apt`, `dnf`, `pacman`)를 통한 베이스 유틸리티 설치.
+- **Layer 2 (asdf)**: 개발 런타임(`Node.js`, `Python`, `Java`, `Go`, `Rust` 등) 버전 관리 및 자동 설치.
+- **Layer 3 (Binary)**: 위 단계에서 지원하지 않는 도구는 `~/.local/bin`에 직접 Binary 배포.
 
-- **Mac mini (M4, 16GB, 256GB)**: MacOS
-- **Mac Studio (M1 Max, 64GB, 512GB)**: Asahi Linux
-- **Surface Pro 6 (28GB, MicroSD 256GB)**: Ubuntu 24 LTS
-- **Chatreey NAS (Intel N100 2Bay, 8GB, 128GB, 4TB)**: Fedora 42
-- **Steam Deck (LCD, 256GB, MicroSD 512GB)**: SteamOS 3.0
-- **GL-iNet Beryl AX (GL-MT3000)**: OpenWRT
-- **GL-iNet Brume 2 (GL-MT2500)**: OpenWRT
+### 하드웨어별 Stow 패키지 매핑
+- **Mac Mini M4 (macOS)**: `base` + `macos`
+- **Surface Pro 6 (Ubuntu 24 LTS)**: `base` + `surface-6`
+- **Chatreey NAS (Fedora 42)**: `base` + `chatreey-nas`
+- **Steam Deck (SteamOS 3.0)**: `base` + `steam-deck`
 
-### Client
-
-- **iPad Pro 12.9 (M1, 1TB, Wi-Fi)**: iOS
-- **iPhone 13 mini (128GB)**: iOS
-- **Galaxy Z Flip5 (512GB)**: Android
+### 엄격한 엔지니어링 제약 (Strict Constraints)
+- **Zero-Trust Security**: 민감 정보는 절대 Git에 포함하지 않으며, `~/.local_secrets`를 `source`하여 사용한다.
+- **Idempotency**: 모든 설정 스크립트(`setup.sh`)는 다시 실행해도 안전한 멱등성을 유지한다.
+- **No Over-Engineering**: 복잡한 템플릿 엔진 대신 GNU Stow와 순수 Bash 스크립트만 사용한다.
