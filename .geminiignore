@@ -1,4 +1,8 @@
-# General OS files
+# ==============================================================================
+# .geminiignore - Optimized for Simple Stow Architect
+# ==============================================================================
+
+# 1. General OS & Junk Files (Always ignore)
 .DS_Store
 .AppleDouble
 .LSOverride
@@ -8,28 +12,29 @@ Temporary Items
 .apdisk
 Thumbs.db
 desktop.ini
+*.bak
 
-# IDEs and Editors
+# 2. IDEs and Editors
 .idea/
 .vscode/
 *.swp
 *.swo
 *~
 
-# Build & Dependency Artifacts
+# 3. Build & Dependency Artifacts (No need to index heavy binaries)
 .gradle/
 node_modules/
 vendor/
 bin/
 obj/
+.asdf/  # asdf 설치 경로 자체는 인덱싱 불필요
 
-# Logs and temporary files
+# 4. Logs and temporary files
 *.log
 tmp/
 temp/
 
-# Sensitive Information (to avoid indexing private data)
-# Even if they are in the repo, AI context often doesn't need raw keys/tokens.
+# 5. Zero-Trust Security (Critical)
 .ssh/
 .netrc
 *.key
@@ -38,21 +43,17 @@ temp/
 *.crt
 .env
 .env.*
-!.env.example
+.local_secrets    # 이 설계의 핵심 보안 파일
 
-# AI Helper Artifacts
+# 6. AI Context - Keep the "Brain" files
+# 설계 문서들은 AI가 읽어야 하므로 Ignore 목록에서 제거합니다.
+# 만약 너무 많다면 아래처럼 예외 처리를 활용하세요.
 .gemini/
-ContextFile.md
-task.md
-implementation_plan.md
-walkthrough.md
-README.md
-GEMINI.md
-# (Keep README/GEMINI.md if you want the AI to know the project docs, 
-# but often we ignore meta-docs to focus on code. 
-# However, GEMINI.md is important for me, so I'll EXCLUDE it from ignore if it's there.)
-!GEMINI.md
-!README.md
 
-# Backups from setup.sh
-*.bak
+# [수정됨] 아래 파일들은 AI가 아키텍처를 이해하는 데 필수적이므로 
+# Ignore 목록에서 제외(삭제)하거나 아래처럼 느낌표(!)로 강제 허용합니다.
+!ContextFile.md
+!implementation_plan.md
+!task.md
+!README.md
+!GEMINI.md
