@@ -15,17 +15,18 @@
   - 예: "Dependency Injection", "Race Condition"
 - **요약 우선**: 긴 설명이 필요한 경우, **TL;DR** 요약을 상단에 배치한다.
 
-## 2. 소유 하드웨어
+## 2. 하드웨어
 
 ### Server
 
-- **GL-iNet Beryl AX (GL-MT3000)**: Wi-Fi 6 Travel Router
-- **GL-iNet Brume 2 (GL-MT2500)**: Security Gateway
-- **Surface Pro 6 (Ubuntu 24 LTS, 128GB, MicroSD 256GB)**
-- **Chatreey NAS (Intel N100 2Bay, 8GB, 128GB, 4TB)**
-- **Mac mini (M4, 16GB, 256GB)**
-- **Mac Studio (M1 Max, 64GB, 512GB)**
-- **Steam Deck (LCD, 256GB, MicroSD 512GB)**
+- **Mac mini (M4, 16GB, 256GB)**: MacOS
+- **Mac Studio (M1 Max, 64GB, 512GB)**: Asahi Linux
+- **Surface Pro 6 (28GB, MicroSD 256GB)**: Ubuntu 24 LTS
+- **Chatreey NAS (Intel N100 2Bay, 8GB, 128GB, 4TB)**: Fedora 42
+- **Steam Deck (LCD, 256GB, MicroSD 512GB)**: SteamOS 3.0
+- **GL-iNet Beryl AX (GL-MT3000)**: OpenWRT 21.02
+- **GL-iNet Brume 2 (GL-MT2500)**: OpenWRT 21.02
+
 
 ### Client
 
