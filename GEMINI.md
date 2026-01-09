@@ -24,12 +24,11 @@
 - **Surface Pro 6 (28GB, MicroSD 256GB)**: Ubuntu 24 LTS
 - **Chatreey NAS (Intel N100 2Bay, 8GB, 128GB, 4TB)**: Fedora 42
 - **Steam Deck (LCD, 256GB, MicroSD 512GB)**: SteamOS 3.0
-- **GL-iNet Beryl AX (GL-MT3000)**: OpenWRT 21.02
-- **GL-iNet Brume 2 (GL-MT2500)**: OpenWRT 21.02
-
+- **GL-iNet Beryl AX (GL-MT3000)**: OpenWRT
+- **GL-iNet Brume 2 (GL-MT2500)**: OpenWRT
 
 ### Client
 
-- **iPad Pro 12.9 (M1, 1TB, Wi-Fi)**
-- **iPhone 13 mini (128GB)**
-- **Galaxy Z Flip5 (512GB)**
+- **iPad Pro 12.9 (M1, 1TB, Wi-Fi)**: iOS
+- **iPhone 13 mini (128GB)**: iOS
+- **Galaxy Z Flip5 (512GB)**: Android
