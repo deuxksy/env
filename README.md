@@ -7,7 +7,7 @@
 ### 💻 OS별 설정
 
 - **[base](./base)**: 모든 환경 공통 설정 (Zsh, Vim, Git)
-- **[macos](./macos)**: macOS 전용 `.alias`, `.path` 설정
+- **[mac-mini](./mac-mini)**: macOS 전용 `.alias`, `.path` 설정
 - **[surface-6](./surface-6)**: Ubuntu (Surface Pro 6) 전용 설정
 - **[chatreey-nas](./chatreey-nas)**: Fedora (NAS) 전용 설정
 - **[steam-deck](./steam-deck)**: Steam Deck 전용 커스텀 설정
@@ -19,7 +19,7 @@
 
 ```bash
 # 예시: macOS alias 설정 적용
-source ~/git/env/mac/Users/default/.alias
+source ~/git/env/mac-mini/.alias
 ```
 
 ---

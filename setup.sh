@@ -96,7 +96,7 @@ run_stow() {
     # OS Specific Packages
     TARGET_PKG=""
     if [ "$OS" == "Darwin" ]; then
-        TARGET_PKG="macos"
+        TARGET_PKG="mac-mini"
     elif [ "$OS" == "Linux" ]; then
         if [[ "$DISTRO" == "ubuntu" || "$DISTRO" == "debian" ]]; then
              TARGET_PKG="surface-6"
@@ -123,7 +123,7 @@ install_asdf() {
     
     if [ ! -d "$HOME/.asdf" ]; then
         echo "   -> Cloning asdf..."
-        execute git clone https://github.com/asdf-vm/asdf.git ~/.asdf --branch v0.14.0
+        execute git clone https://github.com/asdf-vm/asdf.git ~/.asdf --branch v0.18.0
     else
         echo "   -> asdf already installed."
     fi

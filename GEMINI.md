@@ -23,7 +23,7 @@
 - **Layer 3 (Binary)**: 위 단계에서 지원하지 않는 도구는 `~/.local/bin`에 직접 Binary 배포.
 
 ### 하드웨어별 Stow 패키지 매핑
-- **Mac Mini M4 (macOS)**: `base` + `macos`
+- **Mac Mini M4 (macOS)**: `base` + `mac-mini`
 - **Surface Pro 6 (Ubuntu 24 LTS)**: `base` + `surface-6`
 - **Chatreey NAS (Fedora 42)**: `base` + `chatreey-nas`
 - **Steam Deck (SteamOS 3.0)**: `base` + `steam-deck`
