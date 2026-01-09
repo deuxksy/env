@@ -15,13 +15,30 @@
 
 ## 🚀 사용법
 
-각 디렉토리의 파일을 환경에 맞게 복사하거나 심볼릭 링크를 생성하여 사용합니다.
+GNU Stow를 사용하여 설정 파일을 홈 디렉토리에 심볼릭 링크합니다.
 
 ```bash
-# 예시: macOS alias 설정 적용
-source ~/git/env/mac-mini/.alias
+# 1. 저장소 클론
+git clone https://github.com/deuxksy/env.git ~/git/env
+cd ~/git/env
+
+# 2. setup.sh 실행 (OS 자동 감지)
+./setup.sh
+
+# 또는 수동으로 Stow 패키지 적용
+stow -t ~ base        # 공통 설정
+stow -t ~ mac-mini    # macOS 전용 설정
 ```
+
+## 📋 Stow 패키지 매핑
+
+| 환경          | 적용 패키지             |
+| ------------- | ----------------------- |
+| Mac Mini M4   | `base` + `mac-mini`     |
+| Surface Pro 6 | `base` + `surface-6`    |
+| Chatreey NAS  | `base` + `chatreey-nas` |
+| Steam Deck    | `base` + `steam-deck`   |
 
 ---
 
-*Last Updated: 2025-12-31*
+_Last Updated: 2026-01-09_
