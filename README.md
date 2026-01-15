@@ -13,6 +13,18 @@
 - **[steam-deck](./steam-deck)**: Steam Deck 전용 커스텀 설정
 - **[windows](./windows)**: Windows 환경 (Winget 등) 가이드
 
+### 🤖 AI 툴 설정
+
+- **[.ai/](./.ai/)**: AI 도구 중앙 설정 파일
+  - `RULES.md`: AI 툴 공통 규칙
+  - `CONTEXT.md`: 프로젝트 컨텍스트
+  - `AI.ignore`: 무시할 파일/디렉토리 패턴
+- **심볼릭 링크**: 각 AI 툴의 표준 파일명으로 연결
+  - `.clinerules` → `.ai/RULES.md` (Cline)
+  - `.clineignore` → `.ai/AI.ignore` (Cline)
+  - `GEMINI.md` → `.ai/RULES.md` (Google Gemini)
+  - `.github/copilot-instructions.md` → `../.ai/RULES.md` (GitHub Copilot)
+
 ## 🚀 사용법
 
 GNU Stow를 사용하여 설정 파일을 홈 디렉토리에 심볼릭 링크합니다.
@@ -41,4 +53,4 @@ stow -t ~ mac-mini    # macOS 전용 설정
 
 ---
 
-_Last Updated: 2026-01-09_
+_Last Updated: 2026-01-15_
