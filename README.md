@@ -6,26 +6,51 @@
 
 ### 💻 OS별 설정
 
-- **[mac](./mac)**: macOS 사용자별 `alias`, `path` 설정
-- **[linux](./linux)**: Linux (`/etc`, `/var`, `/home`) 시스템 설정 및 홈 디렉토리 구성
-- **[windows](./windows)**: Windows 환경 (Chocolatey 등) 가이드
-- **[steamdeck](./steamdeck)**: Steam Deck 전용 커스텀 설정
+- **[base](./base)**: 모든 환경 공통 설정 (Zsh, Vim, Git)
+- **[mac-mini](./mac-mini)**: macOS 전용 `.alias`, `.path` 설정
+- **[surface-6](./surface-6)**: Ubuntu (Surface Pro 6) 전용 설정
+- **[chatreey-nas](./chatreey-nas)**: Fedora (NAS) 전용 설정
+- **[steam-deck](./steam-deck)**: Steam Deck 전용 커스텀 설정
+- **[windows](./windows)**: Windows 환경 (Winget 등) 가이드
 
-### 🛠 도구 및 스택
+### 🤖 AI 툴 설정
 
-- **[bash](./bash)**: 유틸리티 쉘 스크립트 (DNS 설정, 서비스 관리 등)
-- **[java](./java)**: Java/Gradle 관련 빌드 설정
-- **[ansible](./ansible)**: 인프라 자동화 플레이북
+- **[.ai/](./.ai/)**: AI 도구 중앙 설정 파일
+  - `RULES.md`: AI 툴 공통 규칙
+  - `CONTEXT.md`: 프로젝트 컨텍스트
+  - `AI.ignore`: 무시할 파일/디렉토리 패턴
+- **심볼릭 링크**: 각 AI 툴의 표준 파일명으로 연결
+  - `.clinerules` → `.ai/RULES.md` (Cline)
+  - `.clineignore` → `.ai/AI.ignore` (Cline)
+  - `GEMINI.md` → `.ai/RULES.md` (Google Gemini)
+  - `.github/copilot-instructions.md` → `../.ai/RULES.md` (GitHub Copilot)
 
 ## 🚀 사용법
 
-각 디렉토리의 파일을 환경에 맞게 복사하거나 심볼릭 링크를 생성하여 사용합니다.
+GNU Stow를 사용하여 설정 파일을 홈 디렉토리에 심볼릭 링크합니다.
 
 ```bash
-# 예시: macOS alias 설정 적용
-source ~/git/env/mac/Users/default/alias.sh
+# 1. 저장소 클론
+git clone https://github.com/deuxksy/env.git ~/git/env
+cd ~/git/env
+
+# 2. setup.sh 실행 (OS 자동 감지)
+./setup.sh
+
+# 또는 수동으로 Stow 패키지 적용
+stow -t ~ base        # 공통 설정
+stow -t ~ mac-mini    # macOS 전용 설정
 ```
+
+## 📋 Stow 패키지 매핑
+
+| 환경          | 적용 패키지             |
+| ------------- | ----------------------- |
+| Mac Mini M4   | `base` + `mac-mini`     |
+| Surface Pro 6 | `base` + `surface-6`    |
+| Chatreey NAS  | `base` + `chatreey-nas` |
+| Steam Deck    | `base` + `steam-deck`   |
 
 ---
 
-*Last Updated: 2025-12-31*
+_Last Updated: 2026-01-15_

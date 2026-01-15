@@ -1,5 +1,10 @@
-.idea
-.gradle
+# ==============================================================================
+# .gitignore - Optimized for Dotfiles with GNU Stow
+# ==============================================================================
+
+# --- IDEs & OS Junk ---
+.idea/
+.gradle/
 .DS_Store
 *.swp
 *.swo
@@ -8,4 +13,36 @@
 Icon
 Network Trash Folder
 Temporary Items
-.apdisk
+
+# --- Zero-Trust Security (Must be ignored) ---
+.local_secrets
+*.bak
+*.pem
+*.key
+*.crt
+
+# --- Build Artifacts (Language Specific) ---
+# Java/General Build
+build/
+# bin/ 대신 아래와 같이 특정 경로의 bin만 차단하는 것이 안전함
+# (Stow로 배포할 내 스크립트 bin 폴더와 겹치지 않게 하기 위함)
+target/
+out/
+
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+
+# --- Infrastructure & Tooling ---
+.terraform/
+.terraform.lock.hcl
+# asdf 설치 파일 자체는 무시 (설정 파일인 .tool-versions는 추적해야 함)
+.asdf/
+
+# --- Exceptions (반드시 추적해야 하는 파일들) ---
+# 만약 위에서 bin/ 을 막았다면, 내 커스텀 스크립트 폴더는 강제로 허용
+!common/bin/
+!*/.zshrc
+!*/.Brewfile
+!*/.tool-versions

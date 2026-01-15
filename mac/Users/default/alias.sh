@@ -1,6 +1,0 @@
-alias ls='lsd --color=auto'
-alias ll='lsd -alhFv --group-directories-first'
-alias grep='grep --color=auto'
-alias vi='nvim'
-alias vim='nvim'
-alias tf='terraform'
