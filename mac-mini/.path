@@ -1,11 +1,11 @@
 PATH="$PATH:/opt/homebrew/opt/curl/bin"
 PATH="$PATH:/Users/crong/.local/bin"
-PATH="${ASDF_DATA_DIR:-$HOME/.asdf}/shims:$PATH"
+PATH="$PATH:/Users/crong/.lmstudio/bin"
 
+export PATH
 export TF_PLUGIN_CACHE_DIR="$HOME/.terraform.d/plugin-cache"
 export LDFLAGS="-L/opt/homebrew/opt/curl/lib"
 export CPPFLAGS="-I/opt/homebrew/opt/curl/include"
 export TIME_STYLE='long-iso'
 export EDITOR='nvim'
 export TERM='xterm-256color'
-export PATH

@@ -78,7 +78,6 @@ zstyle ':omz:update' frequency 13
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
 plugins=(
-  asdf
   aliases
   ansible
   aws
@@ -134,18 +133,17 @@ source $ZSH/oh-my-zsh.sh
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 
-. ~/.alias
 . ~/.path
+. ~/.alias
 
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
-# "$HOME/.asdf/asdf.sh"
+
 # append completions to fpath
 fpath=(${ASDF_DIR}/completions $fpath)
 # initialise completions with ZSH's compinit
 autoload -Uz compinit && compinit
 
-# Added by LM Studio CLI (lms)
-export PATH="$PATH:/Users/crong/.lmstudio/bin"
-# End of LM Studio CLI section
-
+eval "$(zoxide init zsh)"
+eval "$(atuin init zsh)"
+eval "$(mise activaate zsh)"
