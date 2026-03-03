@@ -16,14 +16,14 @@
 ### 🤖 AI 툴 설정
 
 - **[.ai/](./.ai/)**: AI 도구 중앙 설정 파일
-  - `RULES.md`: AI 툴 공통 규칙
+  - `AGENTS.md`: AI 툴 공통 규칙
   - `CONTEXT.md`: 프로젝트 컨텍스트
   - `AI.ignore`: 무시할 파일/디렉토리 패턴
 - **심볼릭 링크**: 각 AI 툴의 표준 파일명으로 연결
-  - `.clinerules` → `.ai/RULES.md` (Cline)
+  - `.clinerules` → `.ai/AGENTS.md` (Cline)
   - `.clineignore` → `.ai/AI.ignore` (Cline)
-  - `GEMINI.md` → `.ai/RULES.md` (Google Gemini)
-  - `.github/copilot-instructions.md` → `../.ai/RULES.md` (GitHub Copilot)
+  - `GEMINI.md` → `.ai/AGENTS.md` (Google Gemini)
+  - `.github/copilot-instructions.md` → `../.ai/AGENTS.md` (GitHub Copilot)
 
 ## 🚀 사용법
 
