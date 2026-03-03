@@ -20,6 +20,12 @@ Temporary Items
 *.pem
 *.key
 *.crt
+# SSH private keys (절대 Git에 올리지 말 것)
+.ssh/id_rsa
+.ssh/id_ed25519
+.ssh/id_ecdsa
+.ssh/id_dsa
+.ssh/*.pub
 
 # --- Build Artifacts (Language Specific) ---
 # Java/General Build
