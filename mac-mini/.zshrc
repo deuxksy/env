@@ -135,15 +135,26 @@ source $ZSH/oh-my-zsh.sh
 
 . ~/.path
 . ~/.alias
+. ~/.key
+
+# initialise completions with ZSH's compinit
+autoload -Uz compinit && compinit
+autoload -Uz bashcompinit && bashcompinit
 
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
 
-# append completions to fpath
-fpath=(${ASDF_DIR}/completions $fpath)
-# initialise completions with ZSH's compinit
-autoload -Uz compinit && compinit
-
 eval "$(zoxide init zsh)"
 eval "$(atuin init zsh)"
-eval "$(mise activaate zsh)"
+eval "$(mise activate zsh)"
+
+test -e "${HOME}/.iterm2_shell_integration.zsh" && source "${HOME}/.iterm2_shell_integration.zsh"
+
+
+# pnpm
+export PNPM_HOME="/Users/crong/Library/pnpm"
+case ":$PATH:" in
+  *":$PNPM_HOME:"*) ;;
+  *) export PATH="$PNPM_HOME:$PATH" ;;
+esac
+# pnpm end

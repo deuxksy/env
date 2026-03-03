@@ -1,4 +1,5 @@
 tap "anomalyco/tap"
+tap "charmbracelet/tap"
 # General-purpose data compression with high compression ratio
 brew "xz"
 # Cryptography and SSL/TLS Toolkit
@@ -23,8 +24,6 @@ brew "fastfetch"
 brew "fzf"
 # Distributed revision control system
 brew "git"
-# Post-modern modal text editor
-brew "helix"
 # Improved top (interactive process viewer)
 brew "htop"
 # Configurable static site generator
@@ -57,7 +56,7 @@ brew "stow"
 brew "tcl-tk"
 # Tool to build, change, and version infrastructure
 brew "terraform"
-# Simplified and community-driven man pages
+# Simplified and community-driven man pagesa
 brew "tldr"
 # Terminal multiplexer
 brew "tmux"
@@ -73,22 +72,14 @@ brew "zlib"
 brew "zoxide"
 # The AI coding agent built for the terminal.
 brew "anomalyco/tap/opencode"
+# A powerful terminal-based AI assistant for developers, providing intelligent coding assistance directly in your terminal.
+brew "charmbracelet/tap/crush"
 # Clipboard manager with advanced features
 cask "copyq"
 # Browser for SQLite databases
 cask "db-browser-for-sqlite"
-# Terminal emulator that uses platform-native UI and GPU acceleration
-cask "ghostty"
 # Clipboard manager
 cask "maccy"
-# Minimal installer for conda
-cask "miniconda"
-# Finds large, unwanted files and deletes them
-cask "omnidisksweeper"
-# Native GUI tool for relational databases
-cask "tableplus"
-# Terminal emulator
-cask "wave"
 mas "Authenticator", id: 6463820946
 mas "CapCut", id: 1500855883
 mas "Coffee Buzz", id: 1099454186
@@ -120,3 +111,5 @@ vscode "anysphere.remote-containers"
 vscode "anysphere.remote-ssh"
 vscode "google.gemini-cli-vscode-ide-companion"
 vscode "google.geminicodeassist"
+go "cmd/go"
+go "cmd/gofmt"
