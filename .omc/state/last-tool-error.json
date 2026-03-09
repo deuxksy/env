@@ -1,0 +1,7 @@
+{
+  "tool_name": "Edit",
+  "tool_input_preview": "{\"file_path\":\"/Users/crong/git/env/README.md\",\"old_string\":\"### 💻 OS별 설정\\n\\n- **[base](./base)**: 모든 환경 공통 설정 (Zsh, Vim, Git)\\n- **[mac-mini](./mac-mini)**: macOS 전용 `.alias`, `.path` 설정\\n- **[surfac...",
+  "error": "File has been unexpectedly modified. Read it again before attempting to write it.",
+  "timestamp": "2026-03-09T09:53:06.668Z",
+  "retry_count": 1
+}

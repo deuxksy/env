@@ -2,6 +2,7 @@
 
 **날짜**: 2026-03-03
 **상태**: 승인 완료
+**최종 수정**: 2026-03-09
 
 ## 1. 개요
 
@@ -16,52 +17,48 @@ env/
 │   ├── .vimrc
 │   └── .gitconfig
 │
-├── mac-mini/          # macOS (Stow 관리)
+├── eve/               # macOS (Mac Mini M4)
 │   ├── .ssh/config
 │   ├── .zshrc
 │   ├── .vimrc
 │   ├── .path
 │   ├── .alias
 │   ├── .function.sh
-│   ├── .netrc
+│   ├── .netrc.example
 │   ├── .bashrc
 │   └── .profile
 │   # 제외: .crush/, .ansible/, Brewfile, .key
 │
-├── chatreey-nas/      # Fedora NAS
+├── walle/             # AOOSTAR WTR R1 (Fedora NAS)
 │   └── .alias
 │
-├── steam-deck/        # Steam Deck
-│   └── .alias
-│   # 제외: Brewfile
+├── girl/              # Steam Deck
+│   ├── .alias
+│   └── Brewfile
 │
-├── surface-6/         # Windows (참조용, Stow 제외)
 ├── old/               # 백업 (Stow 제외)
 └── nvim/              # Neovim (교차 플랫폼)
 ```
 
 ## 3. Stow 적용 방법
 
-### Mac Mini M4
+### Mac Mini M4 (eve)
 ```bash
 stow -t ~ base
-stow -t ~ mac-mini
+stow -t ~ eve
 ```
 
-### Chatreey NAS (Fedora)
+### AOOSTAR WTR R1 (walle)
 ```bash
 stow -t ~ base
-stow -t ~ chatreey-nas
+stow -t ~ walle
 ```
 
-### Steam Deck
+### Steam Deck (girl)
 ```bash
 stow -t ~ base
-stow -t ~ steam-deck
+stow -t ~ girl
 ```
-
-### Surface Pro 6 (Windows)
-- 참조용으로만 사용, Stow 미적용
 
 ### Neovim (모든 플랫폼)
 ```bash
@@ -72,9 +69,8 @@ stow -t ~ nvim
 
 | 패키지 | 제외 항목 | 이유 |
 |--------|----------|------|
-| mac-mini | .crush, .ansible, Brewfile, .key | 개인 도구, 비밀정보 |
-| steam-deck | Brewfile | 원 위치 유지 |
-| surface-6 | 전체 | Windows 참조용 |
+| eve | .crush, .ansible, Brewfile, .key | 개인 도구, 비밀정보 |
+| girl | Brewfile | 원 위치 유지 |
 | old | 전체 | 백업용 |
 
 ## 5. 보안

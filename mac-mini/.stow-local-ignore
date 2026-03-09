@@ -1,5 +1,0 @@
-# mac-mini 패키지에서 Stow 제외 항목
-.ansible
-.crush
-.key
-Brewfile
