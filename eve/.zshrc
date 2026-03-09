@@ -78,29 +78,7 @@ zstyle ':omz:update' frequency 13
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
 plugins=(
-  aliases
-  ansible
-  aws
-  colored-man-pages
-  command-not-found
-  cp
-  dotenv
-  emoji
   git
-  git-flow
-  git-lfs
-  gradle
-  man
-  node
-  npm
-  nvm
-  pip
-  python
-  rust
-  sudo
-  terraform
-  vscode
-  yarn
 )
 source $ZSH/oh-my-zsh.sh
 
@@ -109,7 +87,7 @@ source $ZSH/oh-my-zsh.sh
 # export MANPATH="/usr/local/man:$MANPATH"
 
 # You may need to manually set your language environment
-# export LANG=en_US.UTF-8
+export LANG=en_US.UTF-8
 
 # Preferred editor for local and remote sessions
 # if [[ -n $SSH_CONNECTION ]]; then
@@ -133,6 +111,8 @@ source $ZSH/oh-my-zsh.sh
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 
+# To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
+[[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
 . ~/.path
 . ~/.alias
 . ~/.key
@@ -141,20 +121,9 @@ source $ZSH/oh-my-zsh.sh
 autoload -Uz compinit && compinit
 autoload -Uz bashcompinit && bashcompinit
 
-# To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
-[[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
-
 eval "$(zoxide init zsh)"
 eval "$(atuin init zsh)"
 eval "$(mise activate zsh)"
-
 test -e "${HOME}/.iterm2_shell_integration.zsh" && source "${HOME}/.iterm2_shell_integration.zsh"
 
-
-# pnpm
-export PNPM_HOME="/Users/crong/Library/pnpm"
-case ":$PATH:" in
-  *":$PNPM_HOME:"*) ;;
-  *) export PATH="$PNPM_HOME:$PATH" ;;
-esac
-# pnpm end
+fastfetch

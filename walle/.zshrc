@@ -121,6 +121,7 @@ export LANG=en_US.UTF-8
 . ~/.alias
 . ~/.key
 
+# initialise completions with ZSH's compinit
 autoload -Uz compinit && compinit
 autoload -Uz bashcompinit && bashcompinit
 
@@ -129,19 +130,5 @@ eval "$(zoxide init zsh)"
 eval "$(atuin init zsh)"
 eval "$(mise activate zsh)"
 eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"
+
 fastfetch
-
-# Keychain configuration for SSH keys
-#eval $(keychain --eval id_rsa id_ed25519)
-# Keychain configuration for SSH keys
-#eval $(keychain --dir ~/.keychain --eval id_ed25519)
-
-export GOG_KEYRING_PASSWORD="openclaw"
-
-# pnpm
-export PNPM_HOME="/home/crong/.local/share/pnpm"
-case ":$PATH:" in
-  *":$PNPM_HOME:"*) ;;
-  *) export PATH="$PNPM_HOME:$PATH" ;;
-esac
-# pnpm end

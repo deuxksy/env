@@ -78,7 +78,7 @@ zstyle ':omz:update' frequency 13
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
 plugins=(
-git
+  git
 )
 
 source $ZSH/oh-my-zsh.sh
@@ -92,7 +92,7 @@ export LANG=en_US.UTF-8
 
 # Preferred editor for local and remote sessions
 # if [[ -n $SSH_CONNECTION ]]; then
-export EDITOR='vi'
+# export EDITOR='vi'
 # else
 #   export EDITOR='mvim'
 # fi
@@ -108,15 +108,12 @@ export EDITOR='vi'
 # Example aliases
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
-if type brew &>/dev/null; then
-    FPATH=$(brew --prefix)/share/zsh-completions:$FPATH
-fi
 
+# To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
+[[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
 . ~/.path
 . ~/.alias
 . ~/.key
-
-[[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
 
 # initialise completions with ZSH's compinit
 autoload -Uz compinit && compinit
@@ -128,7 +125,3 @@ eval "$(atuin init zsh)"
 eval "$(mise activate zsh)"
 
 fastfetch
-
-# OpenClaw Completion
-source "/home/deck/.openclaw/completions/openclaw.zsh"
-export TS_SOCKET=/run/user/1000/tailscale/tailscaled.sock

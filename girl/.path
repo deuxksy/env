@@ -3,12 +3,23 @@ PATH="${PATH}:${HOME}/bin"
 PATH="${PATH}:${HOME}/.local/bin"
 
 fpath=(/home/linuxbrew/.linuxbrew/share/zsh/site-functions $fpath)
+fpath=$(brew --prefix)/share/zsh-completions:$fpath
 fpath=(~/.zsh/completions $fpath)
 fpath=(~/.zfunc $fpath)
 
-export fpath
 export PATH
+export fpath
 export TIME_STYLE='long-iso'
 export EDITOR='nvim'
 export HISTSIZE=50000
 export HISTFILESIZE=50000
+
+# pnpm
+export PNPM_HOME="/Users/crong/Library/pnpm"
+case ":$PATH:" in
+  *":$PNPM_HOME:"*) ;;
+  *) export PATH="$PNPM_HOME:$PATH" ;;
+esac
+# pnpm end
+
+export TS_SOCKET=/run/user/1000/tailscale/tailscaled.sock
