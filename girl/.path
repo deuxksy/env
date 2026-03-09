@@ -2,7 +2,7 @@ PATH="${PATH}:/home/linuxbrew/.linuxbrew/bin"
 PATH="${PATH}:${HOME}/bin"
 PATH="${PATH}:${HOME}/.local/bin"
 
-fpath=(/home/linuxbrew/.linuxbrew/share/zsh/site-functions $fpath)
+FPATH=(/home/linuxbrew/.linuxbrew/share/zsh/site-functions $FPATH)
 fpath=$(brew --prefix)/share/zsh-completions:$fpath
 fpath=(~/.zsh/completions $fpath)
 fpath=(~/.zfunc $fpath)
