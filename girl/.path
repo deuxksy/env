@@ -23,3 +23,9 @@ esac
 # pnpm end
 
 export TS_SOCKET=/run/user/1000/tailscale/tailscaled.sock
+
+# for lua SteamDeck 에서 mise 에 lua 를 설치하기 위한 설정
+export PATH="/home/linuxbrew/.linuxbrew/opt/glibc/bin:/home/linuxbrew/.linuxbrew/opt/glibc/sbin:$PATH"
+export LDFLAGS="-L/home/linuxbrew/.linuxbrew/opt/glibc/lib"
+export CPPFLAGS="-I/home/linuxbrew/.linuxbrew/opt/glibc/include"
+# for lua
