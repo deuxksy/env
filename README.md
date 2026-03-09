@@ -11,6 +11,20 @@
 - **[walle](./walle)**: Fedora 설정
 - **[girl](./girl)**: Steam Deck 설정
 
+## 설치
+
+```macOS
+brew install stow
+```
+
+```SteamOS
+brew install stow
+```
+
+```Fedora
+sudo dnf install stow
+```
+
 ## 🚀 사용법
 
 GNU Stow를 사용하여 설정 파일을 홈 디렉토리에 심볼릭 링크합니다.
@@ -21,9 +35,12 @@ git clone https://github.com/deuxksy/env.git ~/git/env
 cd ~/git/env
 
 # 또는 수동으로 Stow 패키지 적용
-stow -t ~ base        # 공통 설정
-stow -t ~ eve         # macOS 설정
-stow -t ~ base eve    # 공통 과 macOS 설정 같이
+
+stow -t ~ --adopt base # local 에서 공통 설정 가지고 오기
+stow -t ~ base         # 공통 설정 적용
+stow -t ~ --adopt eve  # lcoal 에서 eve 설정 가지고 오기
+stow -t ~ eve          # eve 설정 적용
+stow -t ~ base eve     # 공통 과 eve 설정 같이 적용
 ```
 
 ## 📋 Stow 패키지 매핑

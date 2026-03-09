@@ -1,0 +1,14 @@
+PATH="${PATH}:/home/linuxbrew/.linuxbrew/bin"
+PATH="${PATH}:${HOME}/bin"
+PATH="${PATH}:${HOME}/.local/bin"
+PATH="${PATH}:${HOME}/.opencode/bin"
+
+fpath=(/home/linuxbrew/.linuxbrew/share/zsh/site-functions $fpath)
+fpath=(~/.zfunc $fpath)
+fpath=(~/.zsh/completions $fpath)
+
+export fpath
+export PATH
+export TIME_STYLE='long-iso'
+export EDITOR='nvim'
+export OLLAMA_VULKAN=1
