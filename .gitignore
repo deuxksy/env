@@ -54,7 +54,7 @@ __pycache__/
 !*/.Brewfile
 !*/.tool-versions
 
-.claude
 .key
 mcporter.json
 !settings.local.json
+.claude.json
