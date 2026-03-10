@@ -40,7 +40,7 @@ Windows, macOS, Linux에서 동작하는 Neovim 설정입니다.
 ### 2. 설정 배치
 
 ```bash
-git clone https://github.com/yourusername/lua.git ~/.config/nvim
+git clone https://github.com/deuxksy/env.git ~/.config/nvim
 ```
 
 ### 3. 의존성 설치
