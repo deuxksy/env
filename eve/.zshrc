@@ -121,9 +121,11 @@ export LANG=en_US.UTF-8
 autoload -Uz compinit && compinit
 autoload -Uz bashcompinit && bashcompinit
 
+test -e "${HOME}/.iterm2_shell_integration.zsh" && source "${HOME}/.iterm2_shell_integration.zsh"
 eval "$(zoxide init zsh)"
 eval "$(atuin init zsh)"
 eval "$(mise activate zsh)"
-test -e "${HOME}/.iterm2_shell_integration.zsh" && source "${HOME}/.iterm2_shell_integration.zsh"
+# OpenClaw Completion
+source "/Users/crong/.openclaw/completions/openclaw.zsh"
 
 fastfetch

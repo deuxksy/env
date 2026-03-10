@@ -44,8 +44,6 @@ __pycache__/
 # --- Infrastructure & Tooling ---
 .terraform/
 .terraform.lock.hcl
-# asdf 설치 파일 자체는 무시 (설정 파일인 .tool-versions는 추적해야 함)
-.asdf/
 # oh-my-claudecode 플러그인 상태 (로컬 전용)
 .omc/
 
@@ -56,5 +54,7 @@ __pycache__/
 !*/.Brewfile
 !*/.tool-versions
 
+.claude
 .key
 mcporter.json
+!settings.local.json

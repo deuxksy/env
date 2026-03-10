@@ -1,28 +1,13 @@
-PATH="/opt/homebrew/bin:$PATH"
-PATH="$PATH:/opt/homebrew/opt/curl/bin"
-PATH="$PATH:/Users/crong/.local/bin"
-PATH="$PATH:/Users/crong/.lmstudio/bin"
+export TIME_STYLE='long-iso'
+export EDITOR='nvim'
+export HISTSIZE=50000
+export HISTFILESIZE=50000
+export PNPM_HOME="${HOME}/Library/pnpm"
 
-fpath=(/opt/homebrew/share/zsh/site-functions $fpath)
+PATH="${PNPM_HOME}:${PATH}"
+PATH="${HOME}/.local/bin:${PATH}"
 fpath=(~/.zsh/completions $fpath)
 fpath=(~/.zfunc $fpath)
 
 export PATH
 export fpath
-export TIME_STYLE='long-iso'
-export EDITOR='nvim'
-export HISTSIZE=50000
-export HISTFILESIZE=50000
-
-# pnpm
-export PNPM_HOME="/Users/crong/Library/pnpm"
-case ":$PATH:" in
-  *":$PNPM_HOME:"*) ;;
-  *) export PATH="$PNPM_HOME:$PATH" ;;
-esac
-# pnpm end
-
-export TF_PLUGIN_CACHE_DIR="$HOME/.terraform.d/plugin-cache"
-export LDFLAGS="-L/opt/homebrew/opt/curl/lib"
-export CPPFLAGS="-I/opt/homebrew/opt/curl/include"
-
